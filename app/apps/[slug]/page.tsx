@@ -52,6 +52,11 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
     Boolean(app.githubUrl) ||
     Boolean(app.websiteUrl)
 
+  const hasStory =
+    Boolean(app.summary) ||
+    Boolean(app.whatIBuilt) ||
+    Boolean(app.whatILearned)
+
   return (
     <main
       style={{
@@ -358,24 +363,105 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
           <h2
             style={{
               fontSize: "24px",
-              margin: "0 0 12px 0",
+              margin: "0 0 16px 0",
             }}
           >
             About this app
           </h2>
 
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: 1.7,
-              color: "#444",
-              margin: 0,
-            }}
-          >
-            This page is ready for the next layer: screenshots, links, platform
-            notes, and a short story about what you built and learned while
-            creating {app.name}.
-          </p>
+          {hasStory ? (
+            <div
+              style={{
+                display: "grid",
+                gap: "20px",
+              }}
+            >
+              {app.summary && (
+                <div>
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      margin: "0 0 8px 0",
+                    }}
+                  >
+                    Summary
+                  </h3>
+
+                  <p
+                    style={{
+                      fontSize: "18px",
+                      lineHeight: 1.7,
+                      color: "#444",
+                      margin: 0,
+                    }}
+                  >
+                    {app.summary}
+                  </p>
+                </div>
+              )}
+
+              {app.whatIBuilt && (
+                <div>
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      margin: "0 0 8px 0",
+                    }}
+                  >
+                    What I built
+                  </h3>
+
+                  <p
+                    style={{
+                      fontSize: "18px",
+                      lineHeight: 1.7,
+                      color: "#444",
+                      margin: 0,
+                    }}
+                  >
+                    {app.whatIBuilt}
+                  </p>
+                </div>
+              )}
+
+              {app.whatILearned && (
+                <div>
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      margin: "0 0 8px 0",
+                    }}
+                  >
+                    What I learned
+                  </h3>
+
+                  <p
+                    style={{
+                      fontSize: "18px",
+                      lineHeight: 1.7,
+                      color: "#444",
+                      margin: 0,
+                    }}
+                  >
+                    {app.whatILearned}
+                  </p>
+                </div>
+              )}
+            </div>
+          ) : (
+            <p
+              style={{
+                fontSize: "18px",
+                lineHeight: 1.7,
+                color: "#444",
+                margin: 0,
+              }}
+            >
+              This project is part of a broader collection of apps I’ve built
+              while learning through shipping, refining interfaces, and turning
+              ideas into real products.
+            </p>
+          )}
         </section>
       </div>
     </main>
