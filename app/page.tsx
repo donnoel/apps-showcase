@@ -20,6 +20,12 @@ const previewPanelTints: Record<string, string> = {
     "linear-gradient(180deg, #f6f5fc 0%, #edf1f8 100%)",
 }
 
+const thumbnailPositions: Record<string, string> = {
+  "coloring-room": "center center",
+  "glow-daily-practice": "center top",
+  "easy-units": "center top",
+}
+
 export default function Home() {
   return (
     <main
@@ -218,9 +224,9 @@ export default function Home() {
                           fill
                           sizes="260px"
                           style={{
-                            objectFit: "contain",
-                            objectPosition: "center",
-                            padding: "4px",
+                            objectFit: "cover",
+                            objectPosition:
+                              thumbnailPositions[app!.slug] ?? "center center",
                           }}
                         />
                       ) : null}
