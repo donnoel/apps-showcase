@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { apps } from "../data/apps"
 
 const featuredSlugs = [
@@ -159,92 +160,140 @@ export default function Home() {
                 href={`/apps/${app.slug}`}
                 style={{
                   display: "block",
-                  padding: "22px 24px",
                   backgroundColor: "#ffffff",
                   border: "1px solid #e5e5e0",
                   borderRadius: "20px",
                   textDecoration: "none",
                   color: "inherit",
+                  overflow: "hidden",
                 }}
               >
                 <div
                   style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    gap: "16px",
-                    flexWrap: "wrap",
-                    marginBottom: "12px",
+                    display: "grid",
+                    gridTemplateColumns: "200px 1fr",
+                    alignItems: "stretch",
                   }}
                 >
-                  <div>
-                    <h3
-                      style={{
-                        fontSize: "28px",
-                        margin: "0 0 8px 0",
-                      }}
-                    >
-                      {app.name}
-                    </h3>
-
-                    <p
-                      style={{
-                        fontSize: "18px",
-                        lineHeight: 1.6,
-                        color: "#444",
-                        margin: 0,
-                        maxWidth: "700px",
-                      }}
-                    >
-                      {app.description}
-                    </p>
+                  <div
+                    style={{
+                      position: "relative",
+                      minHeight: "180px",
+                      backgroundColor: "#f6f6f3",
+                      borderRight: "1px solid #ecece7",
+                    }}
+                  >
+                    {app.heroImage ? (
+                      <Image
+                        src={app.heroImage}
+                        alt={`${app.name} preview`}
+                        fill
+                        sizes="200px"
+                        style={{
+                          objectFit: app.heroFit ?? "cover",
+                          objectPosition: app.heroPosition ?? "center",
+                        }}
+                      />
+                    ) : null}
                   </div>
 
-                  <span
+                  <div
                     style={{
-                      display: "inline-block",
-                      padding: "8px 12px",
-                      borderRadius: "999px",
-                      backgroundColor: "#f1f1ee",
-                      fontSize: "14px",
-                      fontWeight: 700,
-                      color: "#333",
+                      padding: "22px 24px",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      gap: "16px",
                     }}
                   >
-                    {app.status}
-                  </span>
-                </div>
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: "1fr auto",
+                        alignItems: "start",
+                        gap: "16px",
+                        marginBottom: "12px",
+                      }}
+                    >
+                      <div style={{ minWidth: 0 }}>
+                        <h3
+                          style={{
+                            fontSize: "28px",
+                            margin: "0 0 8px 0",
+                          }}
+                        >
+                          {app.name}
+                        </h3>
 
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    gap: "12px",
-                    flexWrap: "wrap",
-                    paddingTop: "14px",
-                    borderTop: "1px solid #ecece7",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      color: "#666",
-                      margin: 0,
-                    }}
-                  >
-                    {app.platform} • {app.location || "Not listed"}
-                  </p>
+                        <p
+                          style={{
+                            fontSize: "18px",
+                            lineHeight: 1.6,
+                            color: "#444",
+                            margin: 0,
+                            maxWidth: "700px",
+                          }}
+                        >
+                          {app.description}
+                        </p>
+                      </div>
 
-                  <span
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: 600,
-                      color: "#444",
-                    }}
-                  >
-                    View project →
-                  </span>
+                      <div
+                        style={{
+                          width: "88px",
+                          display: "flex",
+                          justifyContent: "flex-end",
+                        }}
+                      >
+                        <span
+                          style={{
+                            display: "inline-block",
+                            padding: "8px 12px",
+                            borderRadius: "999px",
+                            backgroundColor: "#f1f1ee",
+                            fontSize: "14px",
+                            fontWeight: 700,
+                            color: "#333",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          {app.status}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        gap: "12px",
+                        flexWrap: "wrap",
+                        paddingTop: "14px",
+                        borderTop: "1px solid #ecece7",
+                      }}
+                    >
+                      <p
+                        style={{
+                          fontSize: "14px",
+                          color: "#666",
+                          margin: 0,
+                        }}
+                      >
+                        {app.platform} • {app.location || "Not listed"}
+                      </p>
+
+                      <span
+                        style={{
+                          fontSize: "14px",
+                          fontWeight: 600,
+                          color: "#444",
+                        }}
+                      >
+                        View project →
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </a>
             ))}
