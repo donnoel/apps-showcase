@@ -2,12 +2,23 @@ import Image from "next/image"
 import { apps } from "../data/apps"
 
 const featuredSlugs = [
-  "glow-daily-practice",
   "coloring-room",
+  "glow-daily-practice",
   "easy-units",
 ]
 
-const featuredApps = apps.filter((app) => featuredSlugs.includes(app.slug))
+const featuredApps = featuredSlugs
+  .map((slug) => apps.find((app) => app.slug === slug))
+  .filter(Boolean)
+
+const previewPanelTints: Record<string, string> = {
+  "glow-daily-practice":
+    "linear-gradient(180deg, #f7faf5 0%, #edf3ec 100%)",
+  "coloring-room":
+    "linear-gradient(180deg, #eef9f7 0%, #e4f1ef 100%)",
+  "easy-units":
+    "linear-gradient(180deg, #f6f5fc 0%, #edf1f8 100%)",
+}
 
 export default function Home() {
   return (
@@ -156,8 +167,8 @@ export default function Home() {
           >
             {featuredApps.map((app) => (
               <a
-                key={app.slug}
-                href={`/apps/${app.slug}`}
+                key={app!.slug}
+                href={`/apps/${app!.slug}`}
                 style={{
                   display: "block",
                   backgroundColor: "#ffffff",
@@ -171,30 +182,49 @@ export default function Home() {
                 <div
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "200px 1fr",
+                    gridTemplateColumns: "260px 1fr",
                     alignItems: "stretch",
                   }}
                 >
                   <div
                     style={{
-                      position: "relative",
-                      minHeight: "180px",
-                      backgroundColor: "#f6f6f3",
+                      padding: "12px",
+                      background:
+                        previewPanelTints[app!.slug] ??
+                        "linear-gradient(180deg, #fbfbf8 0%, #f3f3ef 100%)",
                       borderRight: "1px solid #ecece7",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
                   >
-                    {app.heroImage ? (
-                      <Image
-                        src={app.heroImage}
-                        alt={`${app.name} preview`}
-                        fill
-                        sizes="200px"
-                        style={{
-                          objectFit: app.heroFit ?? "cover",
-                          objectPosition: app.heroPosition ?? "center",
-                        }}
-                      />
-                    ) : null}
+                    <div
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "190px",
+                        borderRadius: "16px",
+                        overflow: "hidden",
+                        backgroundColor: "#ffffff",
+                        boxShadow:
+                          "0 1px 2px rgba(0,0,0,0.04), 0 12px 28px rgba(0,0,0,0.07)",
+                        border: "1px solid #ecece7",
+                      }}
+                    >
+                      {app!.heroImage ? (
+                        <Image
+                          src={app!.heroImage}
+                          alt={`${app!.name} preview`}
+                          fill
+                          sizes="260px"
+                          style={{
+                            objectFit: "contain",
+                            objectPosition: "center",
+                            padding: "4px",
+                          }}
+                        />
+                      ) : null}
+                    </div>
                   </div>
 
                   <div
@@ -222,7 +252,7 @@ export default function Home() {
                             margin: "0 0 8px 0",
                           }}
                         >
-                          {app.name}
+                          {app!.name}
                         </h3>
 
                         <p
@@ -234,7 +264,7 @@ export default function Home() {
                             maxWidth: "700px",
                           }}
                         >
-                          {app.description}
+                          {app!.description}
                         </p>
                       </div>
 
@@ -257,7 +287,7 @@ export default function Home() {
                             whiteSpace: "nowrap",
                           }}
                         >
-                          {app.status}
+                          {app!.status}
                         </span>
                       </div>
                     </div>
@@ -280,7 +310,7 @@ export default function Home() {
                           margin: 0,
                         }}
                       >
-                        {app.platform} • {app.location || "Not listed"}
+                        {app!.platform} • {app!.location || "Not listed"}
                       </p>
 
                       <span
