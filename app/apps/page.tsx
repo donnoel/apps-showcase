@@ -1,5 +1,15 @@
 import { apps } from "../../data/apps"
 
+function parseCreatedOn(value: string): number {
+  const [month, day, year] = value.split("/").map(Number)
+  const fullYear = year < 100 ? 2000 + year : year
+  return new Date(fullYear, month - 1, day).getTime()
+}
+
+const sortedApps = [...apps].sort(
+  (a, b) => parseCreatedOn(b.createdOn) - parseCreatedOn(a.createdOn)
+)
+
 export default function AppsPage() {
   return (
     <main
@@ -45,7 +55,7 @@ export default function AppsPage() {
             gap: "20px",
           }}
         >
-          {apps.map((app) => (
+          {sortedApps.map((app) => (
             <a
               key={app.slug}
               href={`/apps/${app.slug}`}
