@@ -101,9 +101,9 @@ export const apps: AppEntry[] = [
     summary:
       "Driftly is a fullscreen ambient visual app built around cosmic gradients, liquid motion, and abstract generative visuals. It is less a utility than a mood object, something you leave running when you want a space to feel softer, calmer, or more alive.",
     whatIBuilt:
-      "I built Driftly with 22 ambient modes, fullscreen minimal chrome, auto-drift mode cycling, prewarmed transitions, sleep timer controls, brightness edge gestures, optional motion parallax, favorites sync, saved scenes, and shared support across iOS and tvOS.",
+      "I built Driftly with ambient modes, fullscreen minimal chrome, auto-drift mode cycling, prewarmed transitions, sleep timer controls, brightness gestures, favorites sync, saved scenes, and shared support across iOS and tvOS.",
     whatILearned:
-      "Driftly taught me a lot about animation continuity, transition quality, and how fragile immersive experiences can feel when timing or rendering gets even slightly rough. It pushed me to care about motion smoothness, phase continuity, and the details that make generative visuals feel premium instead of gimmicky.",
+      "Driftly taught me a lot about animation continuity, transition quality, and how fragile immersive experiences can feel when timing or rendering gets even slightly rough. It pushed me to care about motion smoothness and the details that make generative visuals feel premium instead of gimmicky.",
   },
   {
     slug: "loom",
@@ -116,11 +116,11 @@ export const apps: AppEntry[] = [
     createdOn: "1/27/26",
     githubUrl: "https://github.com/donnoel/Loom",
     summary:
-      "Loom is a macOS-first local LLM workspace built for private, offline-first AI chats. It is designed around a Finder-like session model, disk-backed conversation history, and local model inference through Ollama.",
+      "Loom is a macOS-first local LLM workspace built for private, offline-first AI chats. It is designed around a Finder-like session model, disk-backed conversation history, and local model inference.",
     whatIBuilt:
-      "I built Loom with session management, append-only disk persistence, streaming assistant replies, speech input, optional spoken responses, file upload grounding, context controls, a Trust Center for local-only transparency, and model-aware guidance throughout the interface.",
+      "I built Loom with session management, disk persistence, streaming assistant replies, speech input, optional spoken responses, file-upload grounding, context controls, and a trust-focused local-first product shape.",
     whatILearned:
-      "Loom pushed me into a different kind of product thinking: privacy, local storage, model capability boundaries, and setup friction all matter as much as the chat UI itself. It taught me how much trust in AI tools comes from clarity about what is local, what is stored, and what the model can actually do.",
+      "Loom pushed me into a different kind of product thinking: privacy, local storage, model capability boundaries, and setup friction all matter as much as the chat UI itself.",
   },
   {
     slug: "project-pilot",
@@ -133,11 +133,11 @@ export const apps: AppEntry[] = [
     createdOn: "2/15/26",
     githubUrl: "https://github.com/donnoel/ProjectPilot",
     summary:
-      "Project Pilot is a macOS menu bar utility for creating known-good Xcode projects from a golden template. Instead of generating something close, it aims to reproduce a trusted starting point with the right structure and settings from the beginning.",
+      "Project Pilot is a macOS menu bar utility for creating known-good Xcode projects from a golden template. Instead of generating something close, it aims to reproduce a trusted starting point with the right structure from the beginning.",
     whatIBuilt:
-      "I built Project Pilot to generate starter SwiftUI apps, tests, assets, AGENTS files, CI workflow files, and `.xcodeproj` metadata from a golden source. It can also initialize git, create a GitHub repo with `gh`, push the first commit, and open the project in Xcode.",
+      "I built Project Pilot to generate starter SwiftUI apps, tests, assets, AGENTS files, CI workflow files, and project metadata from a golden source. It can also initialize git, create a GitHub repo, push the first commit, and open the project in Xcode.",
     whatILearned:
-      "Project Pilot reinforced how much developer experience matters. It taught me that shaving friction off project setup is not just convenience, it helps protect quality, consistency, and momentum before real product work even begins.",
+      "Project Pilot reinforced how much developer experience matters. It taught me that shaving friction off project setup protects quality and momentum before real product work even begins.",
   },
   {
     slug: "coloring-room",
@@ -149,15 +149,16 @@ export const apps: AppEntry[] = [
     location: "Apple App Store",
     createdOn: "2/17/26",
     appStoreUrl: "https://apps.apple.com/us/app/coloring-room/id6761619332",
+    githubUrl: "https://github.com/donnoel/Coloring",
     heroImage: "/apps/coloring-room/hero.jpeg",
     heroFit: "cover",
     heroPosition: "center",
     summary:
-      "The Coloring Room is a calm iPad-first creative app built around focus, relaxation, and playful visual expression. Instead of trying to be a noisy content machine, it aims to feel like a quiet studio where the artwork gets to be the center of attention.",
+      "The Coloring Room is a calm iPad-first creative app built around focus, relaxation, and playful visual expression. It aims to feel like a quiet studio where the artwork gets to be the center of attention.",
     whatIBuilt:
-      "I built The Coloring Room as a premium drawing and coloring experience with an emphasis on presentation, touch comfort, and a more spacious iPad workflow. The goal was to create a product that feels inviting and unhurried while still being polished enough to ship as a real app.",
+      "I built The Coloring Room as an Apple Pencil-native coloring studio with a spacious iPad workflow, drawing library, gallery presentation, import support, and a product shape designed around calm creativity.",
     whatILearned:
-      "This project pushed me to think more carefully about visual hierarchy, content pacing, and how interface chrome can either support or distract from the art itself. It also reinforced how much a focused product benefits from restraint, especially when the real star should be the creative work on the canvas.",
+      "This project pushed me to think carefully about visual hierarchy, content pacing, and how interface chrome can either support or distract from the art itself.",
   },
   {
     slug: "the-podium",
@@ -168,13 +169,14 @@ export const apps: AppEntry[] = [
     version: "2.0",
     location: "Private",
     createdOn: "2/19/26",
+    githubUrl: "https://github.com/donnoel/Chicane",
     heroImage: "/apps/the-podium/hero.jpeg",
     heroFit: "cover",
     heroPosition: "center top",
     summary:
-      "The Podium is a private racing picks and scorekeeping app built for friendly competition around Formula 1 and MotoGP. It is designed to keep predictions, standings, and weekly bragging rights easy to track and fun to revisit.",
+      "The Podium is a premium iOS and iPadOS podium-picks app built around friendly Formula 1 and MotoGP weekend betting. It is designed to keep predictions, standings, and side wagers easy to track and fun to revisit.",
     whatIBuilt:
-      "I built The Podium as a compact multi-tab experience around picks, results, scoreboards, and simple player tracking. The focus was on making a sports prediction app feel clear and lightweight enough for repeated use during a season.",
+      "I built The Podium as a compact multi-tab experience around picks, results, scoreboards, player tracking, and a simple bet ledger. The focus was on making a sports prediction app feel clear, polished, and lightweight enough for repeated use during a season.",
     whatILearned:
       "The Podium reinforced how much sports apps depend on clarity and rhythm. It pushed me to think about glanceability, event timing, and how to keep competitive features playful rather than cluttered.",
   },
@@ -195,7 +197,7 @@ export const apps: AppEntry[] = [
     summary:
       "Easy Units is a polished conversion app for iPhone and iPad built to make everyday measurements feel quick, clear, and friendly. It focuses on practical categories, reversible conversions, and a layout that stays simple even when the feature set grows.",
     whatIBuilt:
-      "I built Easy Units with a focused converter, a searchable Units tab, a Toolkit tab for one-to-many category output, favorites, reversible pair switching, local persistence, and session restoration. The app supports 9 categories and 34 conversion pairs and uses a central catalog as the source of truth for supported converters.",
+      "I built Easy Units with a focused converter, a searchable Units tab, a Toolkit tab for one-to-many category output, favorites, reversible pair switching, local persistence, and session restoration.",
     whatILearned:
       "Easy Units was a useful exercise in restraint. It taught me how to make a utility app feel polished without piling on unnecessary chrome, and how much usability comes from fast interaction loops, clean formatting, and thoughtful defaults.",
   },
@@ -208,11 +210,12 @@ export const apps: AppEntry[] = [
     version: "1.0",
     location: "",
     createdOn: "3/23/26",
+    githubUrl: "https://github.com/donnoel/Pulseboard",
     summary:
-      "Pulseboard is an in-progress concept exploring a living view of world events and signals. The idea is to turn constantly moving information into something clearer, more structured, and easier to scan.",
+      "Pulseboard is a map-first iPhone and iPad app for exploring live natural events from direct public feeds. It is aimed at turning constantly moving event data into something clearer, more structured, and easier to scan.",
     whatIBuilt:
-      "This project is still in development, but the direction centers on building a product that can present changing information in a calm, readable way rather than as a noisy stream.",
+      "This project is centered on a map-first experience for live natural-event exploration, with a product direction focused on readable signals, current event context, and a calmer presentation of fast-changing public data.",
     whatILearned:
-      "Even in its early stage, Pulseboard reflects an ongoing interest in signal versus noise: how to organize dynamic information so it feels useful instead of overwhelming.",
+      "Pulseboard reflects an ongoing interest in signal versus noise: how to organize dynamic information so it feels useful instead of overwhelming.",
   },
 ]
