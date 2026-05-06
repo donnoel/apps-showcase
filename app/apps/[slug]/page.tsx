@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { apps } from "../../../data/apps"
 
 type AppDetailPageProps = {
@@ -130,6 +131,39 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
             {app.status}
           </span>
         </div>
+
+        {app.heroImage && (
+          <section
+            style={{
+              marginBottom: "24px",
+              borderRadius: "20px",
+              overflow: "hidden",
+              border: "1px solid #e5e5e0",
+              backgroundColor: "#ffffff",
+            }}
+          >
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                aspectRatio: "16 / 9",
+                backgroundColor: "#f6f6f3",
+              }}
+            >
+              <Image
+                src={app.heroImage}
+                alt={`${app.name} preview`}
+                fill
+                priority
+                sizes="(max-width: 960px) 100vw, 960px"
+                style={{
+                  objectFit: app.heroFit ?? "cover",
+                  objectPosition: app.heroPosition ?? "center",
+                }}
+              />
+            </div>
+          </section>
+        )}
 
         <section
           style={{

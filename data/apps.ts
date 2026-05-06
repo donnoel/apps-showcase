@@ -15,6 +15,9 @@ export type AppEntry = {
   summary?: string
   whatIBuilt?: string
   whatILearned?: string
+  heroImage?: string
+  heroFit?: "cover" | "contain"
+  heroPosition?: string
 }
 
 export const apps: AppEntry[] = [
@@ -28,6 +31,9 @@ export const apps: AppEntry[] = [
     location: "Apple App Store",
     createdOn: "10/23/25",
     appStoreUrl: "https://apps.apple.com/us/app/pause-for-a-moment/id6755661954",
+    heroImage: "/apps/pause-for-a-moment/hero.jpeg",
+    heroFit: "contain",
+    heroPosition: "center",
   },
   {
     slug: "glow-daily-practice",
@@ -39,6 +45,9 @@ export const apps: AppEntry[] = [
     location: "Apple App Store",
     createdOn: "10/29/25",
     appStoreUrl: "https://apps.apple.com/us/app/glow-daily-practice/id6755254758",
+    heroImage: "/apps/glow-daily-practice/hero.jpeg",
+    heroFit: "cover",
+    heroPosition: "center top",
     summary:
       "Glow is a calm, modern habit-tracking app designed to help people build routines without guilt, noise, or pressure. It gives practices a clean home, makes daily check-ins feel lightweight, and turns consistency into something encouraging instead of exhausting.",
     whatIBuilt:
@@ -56,6 +65,9 @@ export const apps: AppEntry[] = [
     location: "Private",
     createdOn: "11/30/25",
     notes: "UI/UX",
+    heroImage: "/apps/briefly/hero.jpeg",
+    heroFit: "cover",
+    heroPosition: "center top",
   },
   {
     slug: "driftly-night",
@@ -67,6 +79,9 @@ export const apps: AppEntry[] = [
     location: "Apple App Store",
     createdOn: "12/11/25",
     appStoreUrl: "https://apps.apple.com/us/app/driftly-night/id6758164205",
+    heroImage: "/apps/driftly-night/hero.jpeg",
+    heroFit: "cover",
+    heroPosition: "center",
   },
   {
     slug: "loom",
@@ -98,6 +113,9 @@ export const apps: AppEntry[] = [
     location: "Apple App Store",
     createdOn: "2/17/26",
     appStoreUrl: "https://apps.apple.com/us/app/coloring-room/id6761619332",
+    heroImage: "/apps/coloring-room/hero.jpeg",
+    heroFit: "cover",
+    heroPosition: "center",
     summary:
       "The Coloring Room is a calm iPad-first creative app built around focus, relaxation, and playful visual expression. Instead of trying to be a noisy content machine, it aims to feel like a quiet studio where the artwork gets to be the center of attention.",
     whatIBuilt:
@@ -114,6 +132,9 @@ export const apps: AppEntry[] = [
     version: "2.0",
     location: "Private",
     createdOn: "2/19/26",
+    heroImage: "/apps/the-podium/hero.jpeg",
+    heroFit: "cover",
+    heroPosition: "center top",
   },
   {
     slug: "easy-units",
@@ -125,6 +146,9 @@ export const apps: AppEntry[] = [
     location: "Apple App Store",
     createdOn: "3/12/26",
     appStoreUrl: "https://apps.apple.com/us/app/easy-units/id6761770180",
+    heroImage: "/apps/easy-units/hero.jpeg",
+    heroFit: "contain",
+    heroPosition: "center",
     summary:
       "Easy Units is a fast, friendly conversion app for iPhone and iPad built to make everyday measurements feel simple instead of fiddly. It focuses on clarity, quick switching, and practical categories people actually reach for.",
     whatIBuilt:
