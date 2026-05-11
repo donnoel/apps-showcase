@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { apps } from "../../../data/apps"
+import styles from "./page.module.css"
 
 type AppDetailPageProps = {
   params: Promise<{
@@ -13,33 +14,10 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
 
   if (!app) {
     return (
-      <main
-        style={{
-          minHeight: "100vh",
-          padding: "56px 24px",
-          backgroundColor: "#f7f7f5",
-          color: "#1a1a1a",
-        }}
-      >
-        <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-          <h1
-            style={{
-              fontSize: "48px",
-              lineHeight: 1.1,
-              margin: "0 0 12px 0",
-            }}
-          >
-            App not found
-          </h1>
-
-          <p
-            style={{
-              fontSize: "20px",
-              lineHeight: 1.6,
-              color: "#444",
-              margin: 0,
-            }}
-          >
+      <main className={styles.main}>
+        <div className={styles.container}>
+          <h1 className={styles.notFoundTitle}>App not found</h1>
+          <p className={styles.notFoundText}>
             The app you’re looking for doesn’t exist.
           </p>
         </div>
@@ -59,103 +37,29 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
     Boolean(app.whatILearned)
 
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        padding: "56px 24px",
-        backgroundColor: "#f7f7f5",
-        color: "#1a1a1a",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "960px",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-start",
-            gap: "16px",
-            flexWrap: "wrap",
-            marginBottom: "20px",
-          }}
-        >
-          <div>
-            <h1
-              style={{
-                fontSize: "56px",
-                lineHeight: 1.05,
-                margin: "0 0 12px 0",
-              }}
-            >
-              {app.name}
-            </h1>
+    <main className={styles.main}>
+      <div className={styles.container}>
+        <div className={styles.headerBlock}>
+          <div className={styles.headerText}>
+            <h1 className={styles.title}>{app.name}</h1>
 
-            <p
-              style={{
-                fontSize: "20px",
-                lineHeight: 1.6,
-                color: "#444",
-                margin: "0 0 12px 0",
-                maxWidth: "720px",
-              }}
-            >
-              {app.description}
-            </p>
+            <p className={styles.description}>{app.description}</p>
 
-            <p
-              style={{
-                fontSize: "16px",
-                color: "#666",
-                margin: 0,
-              }}
-            >
-              {app.platform}
-            </p>
+            <p className={styles.platform}>{app.platform}</p>
           </div>
 
-          <span
-            style={{
-              display: "inline-block",
-              padding: "10px 14px",
-              borderRadius: "999px",
-              backgroundColor: "#f1f1ee",
-              fontSize: "14px",
-              fontWeight: 700,
-              color: "#333",
-            }}
-          >
-            {app.status}
-          </span>
+          <span className={styles.badge}>{app.status}</span>
         </div>
 
         {app.heroImage && (
-          <section
-            style={{
-              marginBottom: "24px",
-              borderRadius: "20px",
-              overflow: "hidden",
-              border: "1px solid #e5e5e0",
-              backgroundColor: "#ffffff",
-            }}
-          >
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                aspectRatio: "16 / 9",
-                backgroundColor: "#f6f6f3",
-              }}
-            >
+          <section className={styles.heroSection}>
+            <div className={styles.heroFrame}>
               <Image
                 src={app.heroImage}
                 alt={`${app.name} preview`}
                 fill
                 priority
-                sizes="(max-width: 960px) 100vw, 960px"
+                sizes="(max-width: 767px) 100vw, 960px"
                 style={{
                   objectFit: app.heroFit ?? "cover",
                   objectPosition: app.heroPosition ?? "center",
@@ -165,160 +69,43 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
           </section>
         )}
 
-        <section
-          style={{
-            padding: "24px",
-            backgroundColor: "#ffffff",
-            border: "1px solid #e5e5e0",
-            borderRadius: "20px",
-            marginBottom: "24px",
-          }}
-        >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-              gap: "16px",
-            }}
-          >
+        <section className={styles.metaCard}>
+          <div className={styles.metaGrid}>
             <div>
-              <p
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
-                  color: "#777",
-                  margin: "0 0 4px 0",
-                }}
-              >
-                Version
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  color: "#333",
-                  margin: 0,
-                }}
-              >
-                {app.version}
-              </p>
+              <p className={styles.metaLabel}>Version</p>
+              <p className={styles.metaValue}>{app.version}</p>
             </div>
 
             <div>
-              <p
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
-                  color: "#777",
-                  margin: "0 0 4px 0",
-                }}
-              >
-                Created
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  color: "#333",
-                  margin: 0,
-                }}
-              >
-                {app.createdOn}
-              </p>
+              <p className={styles.metaLabel}>Created</p>
+              <p className={styles.metaValue}>{app.createdOn}</p>
             </div>
 
             <div>
-              <p
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
-                  color: "#777",
-                  margin: "0 0 4px 0",
-                }}
-              >
-                Location
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  color: "#333",
-                  margin: 0,
-                }}
-              >
+              <p className={styles.metaLabel}>Location</p>
+              <p className={styles.metaValue}>
                 {app.location || "Not listed"}
               </p>
             </div>
 
             <div>
-              <p
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
-                  color: "#777",
-                  margin: "0 0 4px 0",
-                }}
-              >
-                Notes
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  color: "#333",
-                  margin: 0,
-                }}
-              >
-                {app.notes || "—"}
-              </p>
+              <p className={styles.metaLabel}>Notes</p>
+              <p className={styles.metaValue}>{app.notes || "—"}</p>
             </div>
           </div>
         </section>
 
         {hasLinks && (
-          <section
-            style={{
-              padding: "24px",
-              backgroundColor: "#ffffff",
-              border: "1px solid #e5e5e0",
-              borderRadius: "20px",
-              marginBottom: "24px",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "24px",
-                margin: "0 0 16px 0",
-              }}
-            >
-              Links
-            </h2>
+          <section className={styles.linksCard}>
+            <h2 className={styles.sectionTitle}>Links</h2>
 
-            <div
-              style={{
-                display: "flex",
-                gap: "12px",
-                flexWrap: "wrap",
-              }}
-            >
+            <div className={styles.linkRow}>
               {app.appStoreUrl && (
                 <a
                   href={app.appStoreUrl}
                   target="_blank"
                   rel="noreferrer"
-                  style={{
-                    display: "inline-block",
-                    padding: "12px 16px",
-                    backgroundColor: "#111",
-                    color: "#fff",
-                    textDecoration: "none",
-                    borderRadius: "999px",
-                    fontWeight: 600,
-                  }}
+                  className={styles.primaryLink}
                 >
                   App Store
                 </a>
@@ -329,15 +116,7 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
                   href={app.playStoreUrl}
                   target="_blank"
                   rel="noreferrer"
-                  style={{
-                    display: "inline-block",
-                    padding: "12px 16px",
-                    backgroundColor: "#111",
-                    color: "#fff",
-                    textDecoration: "none",
-                    borderRadius: "999px",
-                    fontWeight: 600,
-                  }}
+                  className={styles.primaryLink}
                 >
                   Play Store
                 </a>
@@ -348,16 +127,7 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
                   href={app.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  style={{
-                    display: "inline-block",
-                    padding: "12px 16px",
-                    border: "1px solid #ccc",
-                    color: "#111",
-                    textDecoration: "none",
-                    borderRadius: "999px",
-                    fontWeight: 600,
-                    backgroundColor: "#fff",
-                  }}
+                  className={styles.secondaryLink}
                 >
                   GitHub
                 </a>
@@ -368,16 +138,7 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
                   href={app.websiteUrl}
                   target="_blank"
                   rel="noreferrer"
-                  style={{
-                    display: "inline-block",
-                    padding: "12px 16px",
-                    border: "1px solid #ccc",
-                    color: "#111",
-                    textDecoration: "none",
-                    borderRadius: "999px",
-                    fontWeight: 600,
-                    backgroundColor: "#fff",
-                  }}
+                  className={styles.secondaryLink}
                 >
                   Website
                 </a>
@@ -386,111 +147,34 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
           </section>
         )}
 
-        <section
-          style={{
-            padding: "24px",
-            backgroundColor: "#ffffff",
-            border: "1px solid #e5e5e0",
-            borderRadius: "20px",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "24px",
-              margin: "0 0 16px 0",
-            }}
-          >
-            About this app
-          </h2>
+        <section className={styles.storyCard}>
+          <h2 className={styles.sectionTitle}>About this app</h2>
 
           {hasStory ? (
-            <div
-              style={{
-                display: "grid",
-                gap: "20px",
-              }}
-            >
+            <div className={styles.storyGrid}>
               {app.summary && (
                 <div>
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      margin: "0 0 8px 0",
-                    }}
-                  >
-                    Summary
-                  </h3>
-
-                  <p
-                    style={{
-                      fontSize: "18px",
-                      lineHeight: 1.7,
-                      color: "#444",
-                      margin: 0,
-                    }}
-                  >
-                    {app.summary}
-                  </p>
+                  <h3 className={styles.storyHeading}>Summary</h3>
+                  <p className={styles.storyText}>{app.summary}</p>
                 </div>
               )}
 
               {app.whatIBuilt && (
                 <div>
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      margin: "0 0 8px 0",
-                    }}
-                  >
-                    What I built
-                  </h3>
-
-                  <p
-                    style={{
-                      fontSize: "18px",
-                      lineHeight: 1.7,
-                      color: "#444",
-                      margin: 0,
-                    }}
-                  >
-                    {app.whatIBuilt}
-                  </p>
+                  <h3 className={styles.storyHeading}>What I built</h3>
+                  <p className={styles.storyText}>{app.whatIBuilt}</p>
                 </div>
               )}
 
               {app.whatILearned && (
                 <div>
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      margin: "0 0 8px 0",
-                    }}
-                  >
-                    What I learned
-                  </h3>
-
-                  <p
-                    style={{
-                      fontSize: "18px",
-                      lineHeight: 1.7,
-                      color: "#444",
-                      margin: 0,
-                    }}
-                  >
-                    {app.whatILearned}
-                  </p>
+                  <h3 className={styles.storyHeading}>What I learned</h3>
+                  <p className={styles.storyText}>{app.whatILearned}</p>
                 </div>
               )}
             </div>
           ) : (
-            <p
-              style={{
-                fontSize: "18px",
-                lineHeight: 1.7,
-                color: "#444",
-                margin: 0,
-              }}
-            >
+            <p className={styles.storyText}>
               This project is part of a broader collection of apps I’ve built
               while learning through shipping, refining interfaces, and turning
               ideas into real products.
