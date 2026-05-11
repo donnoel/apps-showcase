@@ -1,229 +1,224 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2870
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+cat > app/apps/\[slug\]/page.module.css <<'EOF'
+.main {
+  min-height: 100vh;
+  padding: 56px 24px;
+  background: #f7f7f5;
+  color: #1a1a1a;
+}
 
-\f0\fs24 \cf0 .main \{\
-  min-height: 100vh;\
-  padding: 56px 24px;\
-  background: #f7f7f5;\
-  color: #1a1a1a;\
-\}\
-\
-.container \{\
-  max-width: 960px;\
-  margin: 0 auto;\
-\}\
-\
-.headerBlock \{\
-  display: flex;\
-  justify-content: space-between;\
-  align-items: flex-start;\
-  gap: 16px;\
-  flex-wrap: wrap;\
-  margin-bottom: 20px;\
-\}\
-\
-.headerText \{\
-  min-width: 0;\
-\}\
-\
-.title \{\
-  font-size: 56px;\
-  line-height: 1.05;\
-  margin: 0 0 12px;\
-\}\
-\
-.description \{\
-  font-size: 20px;\
-  line-height: 1.6;\
-  color: #444;\
-  margin: 0 0 12px;\
-  max-width: 720px;\
-\}\
-\
-.platform \{\
-  font-size: 16px;\
-  color: #666;\
-  margin: 0;\
-\}\
-\
-.badge \{\
-  display: inline-block;\
-  padding: 10px 14px;\
-  border-radius: 999px;\
-  background: #f1f1ee;\
-  font-size: 14px;\
-  font-weight: 700;\
-  color: #333;\
-  white-space: nowrap;\
-\}\
-\
-.heroSection \{\
-  margin-bottom: 24px;\
-\}\
-\
-.heroFrame \{\
-  position: relative;\
-  width: 100%;\
-  aspect-ratio: 16 / 9;\
-  border-radius: 20px;\
-  overflow: hidden;\
-  border: 1px solid #e5e5e0;\
-  background: #fff;\
-\}\
-\
-.metaCard,\
-.linksCard,\
-.storyCard \{\
-  padding: 24px;\
-  background: #fff;\
-  border: 1px solid #e5e5e0;\
-  border-radius: 20px;\
-\}\
-\
-.metaCard,\
-.linksCard \{\
-  margin-bottom: 24px;\
-\}\
-\
-.metaGrid \{\
-  display: grid;\
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));\
-  gap: 16px;\
-\}\
-\
-.metaLabel \{\
-  font-size: 12px;\
-  font-weight: 700;\
-  letter-spacing: 0.06em;\
-  text-transform: uppercase;\
-  color: #777;\
-  margin: 0 0 4px;\
-\}\
-\
-.metaValue \{\
-  font-size: 18px;\
-  color: #333;\
-  margin: 0;\
-\}\
-\
-.sectionTitle \{\
-  font-size: 24px;\
-  margin: 0 0 16px;\
-\}\
-\
-.linkRow \{\
-  display: flex;\
-  gap: 12px;\
-  flex-wrap: wrap;\
-\}\
-\
-.primaryLink,\
-.secondaryLink \{\
-  display: inline-block;\
-  padding: 12px 16px;\
-  border-radius: 999px;\
-  text-decoration: none;\
-  font-weight: 600;\
-\}\
-\
-.primaryLink \{\
-  background: #111;\
-  color: #fff;\
-\}\
-\
-.secondaryLink \{\
-  border: 1px solid #ccc;\
-  color: #111;\
-  background: #fff;\
-\}\
-\
-.storyGrid \{\
-  display: grid;\
-  gap: 20px;\
-\}\
-\
-.storyHeading \{\
-  font-size: 18px;\
-  margin: 0 0 8px;\
-\}\
-\
-.storyText \{\
-  font-size: 18px;\
-  line-height: 1.7;\
-  color: #444;\
-  margin: 0;\
-\}\
-\
-.notFoundTitle \{\
-  font-size: 48px;\
-  line-height: 1.1;\
-  margin: 0 0 12px;\
-\}\
-\
-.notFoundText \{\
-  font-size: 20px;\
-  line-height: 1.6;\
-  color: #444;\
-  margin: 0;\
-\}\
-\
-@media (max-width: 767px) \{\
-  .main \{\
-    padding: 32px 16px 56px;\
-  \}\
-\
-  .title \{\
-    font-size: 40px;\
-    line-height: 1.02;\
-  \}\
-\
-  .description \{\
-    font-size: 18px;\
-    line-height: 1.55;\
-  \}\
-\
-  .platform \{\
-    font-size: 15px;\
-  \}\
-\
-  .heroFrame \{\
-    aspect-ratio: 5 / 4;\
-  \}\
-\
-  .metaCard,\
-  .linksCard,\
-  .storyCard \{\
-    padding: 20px;\
-  \}\
-\
-  .metaGrid \{\
-    grid-template-columns: 1fr;\
-    gap: 18px;\
-  \}\
-\
-  .metaValue \{\
-    font-size: 16px;\
-  \}\
-\
-  .sectionTitle \{\
-    font-size: 22px;\
-  \}\
-\
-  .storyText \{\
-    font-size: 17px;\
-    line-height: 1.65;\
-  \}\
-\
-  .notFoundTitle \{\
-    font-size: 36px;\
-    line-height: 1.08;\
-  \}\
-\
-  .notFoundText \{\
-    font-size: 18px;\
-  \}\
-\}}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.headerBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.headerText {
+  min-width: 0;
+}
+
+.title {
+  font-size: 56px;
+  line-height: 1.05;
+  margin: 0 0 12px;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0 0 12px;
+  max-width: 720px;
+}
+
+.platform {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #f1f1ee;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+}
+
+.heroSection {
+  margin-bottom: 24px;
+}
+
+.heroFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e5e5e0;
+  background: #fff;
+}
+
+.metaCard,
+.linksCard,
+.storyCard {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e5e5e0;
+  border-radius: 20px;
+}
+
+.metaCard,
+.linksCard {
+  margin-bottom: 24px;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.metaLabel {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #777;
+  margin: 0 0 4px;
+}
+
+.metaValue {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  margin: 0 0 16px;
+}
+
+.linkRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primaryLink,
+.secondaryLink {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primaryLink {
+  background: #111;
+  color: #fff;
+}
+
+.secondaryLink {
+  border: 1px solid #ccc;
+  color: #111;
+  background: #fff;
+}
+
+.storyGrid {
+  display: grid;
+  gap: 20px;
+}
+
+.storyHeading {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.storyText {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+}
+
+.notFoundTitle {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.notFoundText {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .main {
+    padding: 32px 16px 56px;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 1.02;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  .platform {
+    font-size: 15px;
+  }
+
+  .heroFrame {
+    aspect-ratio: 5 / 4;
+  }
+
+  .metaCard,
+  .linksCard,
+  .storyCard {
+    padding: 20px;
+  }
+
+  .metaGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .metaValue {
+    font-size: 16px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .storyText {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .notFoundTitle {
+    font-size: 36px;
+    line-height: 1.08;
+  }
+
+  .notFoundText {
+    font-size: 18px;
+  }
+}
+EOF
