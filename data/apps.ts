@@ -254,7 +254,7 @@ export const apps: AppEntry[] = [
     projectNumber: 10,
     projectName: "Pulseboard",
     slug: "pulseboard",
-    name: "Pulseboard",
+    name: "Earth Pulse",
     description: "A development-stage app exploring a living view of world events and signals.",
     platform: "iPhone / iPad",
     status: "In Development",
@@ -266,11 +266,11 @@ export const apps: AppEntry[] = [
     githubUrl: "https://github.com/donnoel/Pulseboard",
     githubPagesUrl: "https://donnoel.github.io/Pulseboard/",
     summary:
-      "Pulseboard is a map-first iPhone and iPad app for exploring live natural events from direct public feeds. It is aimed at turning constantly moving event data into something clearer, more structured, and easier to scan.",
+      "Earth Pulse is a map-first iPhone and iPad app for exploring live natural events from direct public feeds. It is aimed at turning constantly moving event data into something clearer, more structured, and easier to scan.",
     whatIBuilt:
       "This project is centered on a map-first experience for live natural-event exploration, with a product direction focused on readable signals, current event context, and a calmer presentation of fast-changing public data.",
     whatILearned:
-      "Pulseboard reflects an ongoing interest in signal versus noise: how to organize dynamic information so it feels useful instead of overwhelming.",
+      "Earth Pulse reflects an ongoing interest in signal versus noise: how to organize dynamic information so it feels useful instead of overwhelming.",
   },
   {
     projectNumber: 11,
@@ -286,6 +286,7 @@ export const apps: AppEntry[] = [
     createdOn: "6/5/26",
     roadmap: "Portfolio maintenance",
     githubUrl: "https://github.com/donnoel/apps-showcase",
+    githubPagesUrl: "https://donnoel.github.io/apps-showcase/",
     websiteUrl: "https://main.d3g59tagskgi8.amplifyapp.com/",
     summary:
       "App Showcase is the web portfolio that ties the full project collection together. It gives each app a place to live with status, platform, links, roadmap notes, and a short story about what was built.",
@@ -306,9 +307,7 @@ export const apps: AppEntry[] = [
     version: "1.0",
     location: "Play Store",
     createdOn: "6/5/26",
-    roadmap: "Android launch path",
-    githubUrl: "https://github.com/donnoel/Glow",
-    githubPagesUrl: "https://donnoel.github.io/Glow/",
+    roadmap: "",
     summary:
       "Glow for Android extends the daily-practice idea beyond Apple platforms with a focused version of the habit-building experience for Play Store release.",
     whatIBuilt:
@@ -318,7 +317,7 @@ export const apps: AppEntry[] = [
   },
   {
     projectNumber: 13,
-    projectName: "Beam",
+    projectName: "PiSignage",
     slug: "beam",
     name: "Beam",
     description: "A web-based digital signage project connected to the PiSignage platform work.",
@@ -328,7 +327,7 @@ export const apps: AppEntry[] = [
     version: "1.0",
     location: "N/A",
     createdOn: "5/20/26",
-    roadmap: "Digital signage workflow refinement",
+    roadmap: "",
     githubUrl: "https://github.com/donnoel/PiSignage",
     githubPagesUrl: "https://donnoel.github.io/PiSignage/",
     summary:
@@ -350,7 +349,7 @@ export const apps: AppEntry[] = [
     version: "1.0",
     location: "Apple App Store",
     createdOn: "5/20/26",
-    roadmap: "Time tracking workflow polish",
+    roadmap: "",
     githubUrl: "https://github.com/donnoel/Tick",
     githubPagesUrl: "https://donnoel.github.io/Tick/",
     summary:
