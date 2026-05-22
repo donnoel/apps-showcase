@@ -352,6 +352,9 @@ export const apps: AppEntry[] = [
     roadmap: "",
     githubUrl: "https://github.com/donnoel/Tick",
     githubPagesUrl: "https://donnoel.github.io/Tick/",
+    heroImage: "/apps/ticks/hero.jpeg",
+    heroFit: "contain",
+    heroPosition: "center",
     summary:
       "Ticks is a timekeeping app intended to make project time tracking quick, low-friction, and easy to correct when a timer was not started on time.",
     whatIBuilt:
