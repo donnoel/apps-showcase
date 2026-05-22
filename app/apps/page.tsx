@@ -18,8 +18,9 @@ export default function AppsPage() {
         <h1 className={styles.title}>Apps</h1>
 
         <p className={styles.intro}>
-          A collection of apps I’ve built across Apple platforms and Android,
-          with a focus on thoughtful UI, calm experiences, and steady iteration.
+          A collection of apps I’ve built across Apple platforms, Android, and
+          the web, with a focus on thoughtful UI, calm experiences, and steady
+          iteration.
         </p>
 
         <div className={styles.grid}>
@@ -31,6 +32,9 @@ export default function AppsPage() {
             >
               <div className={styles.cardHeader}>
                 <div className={styles.cardHeaderText}>
+                  <p className={styles.projectLabel}>
+                    Project {app.projectNumber} · {app.projectName}
+                  </p>
                   <h2 className={styles.cardTitle}>{app.name}</h2>
                   <p className={styles.cardDescription}>{app.description}</p>
                   <p className={styles.platform}>{app.platform}</p>
@@ -51,6 +55,11 @@ export default function AppsPage() {
                 </div>
 
                 <div>
+                  <p className={styles.metaLabel}>Audience</p>
+                  <p className={styles.metaValue}>{app.audience}</p>
+                </div>
+
+                <div>
                   <p className={styles.metaLabel}>Location</p>
                   <p className={styles.metaValue}>
                     {app.location || "Not listed"}
@@ -58,8 +67,8 @@ export default function AppsPage() {
                 </div>
 
                 <div>
-                  <p className={styles.metaLabel}>Notes</p>
-                  <p className={styles.metaValue}>{app.notes || "—"}</p>
+                  <p className={styles.metaLabel}>Roadmap</p>
+                  <p className={styles.metaValue}>{app.roadmap || "—"}</p>
                 </div>
               </div>
             </a>
