@@ -53,6 +53,15 @@
   flex: 1;
 }
 
+.projectLabel {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #777;
+  margin: 0 0 8px;
+}
+
 .cardTitle {
   font-size: 28px;
   margin: 0 0 8px;
@@ -85,8 +94,8 @@
 
 .metaGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
   padding-top: 16px;
   border-top: 1px solid #ecece7;
 }
@@ -140,6 +149,11 @@
 
   .cardHeaderText {
     min-width: 0;
+  }
+
+  .projectLabel {
+    font-size: 11px;
+    margin-bottom: 6px;
   }
 
   .cardTitle {
