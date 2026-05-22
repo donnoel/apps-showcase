@@ -144,6 +144,9 @@ export const apps: AppEntry[] = [
     roadmap: "Local AI workflow refinements",
     githubUrl: "https://github.com/donnoel/Loom",
     githubPagesUrl: "https://donnoel.github.io/Loom/",
+    heroImage: "/apps/loom/hero.jpeg",
+    heroFit: "cover",
+    heroPosition: "center",
     summary:
       "Loom is a macOS-first local LLM workspace built for private, offline-first AI chats. It is designed around a Finder-like session model, disk-backed conversation history, and local model inference.",
     whatIBuilt:
@@ -166,6 +169,9 @@ export const apps: AppEntry[] = [
     roadmap: "Template and workflow polish",
     githubUrl: "https://github.com/donnoel/ProjectPilot",
     githubPagesUrl: "https://donnoel.github.io/ProjectPilot/",
+    heroImage: "/apps/project-pilot/hero.jpeg",
+    heroFit: "cover",
+    heroPosition: "center",
     summary:
       "Project Pilot is a macOS menu bar utility for creating known-good Xcode projects from a golden template. Instead of generating something close, it aims to reproduce a trusted starting point with the right structure from the beginning.",
     whatIBuilt:
@@ -218,7 +224,7 @@ export const apps: AppEntry[] = [
     heroFit: "cover",
     heroPosition: "center top",
     summary:
-      "The Podium is a premium iOS and iPadOS podium-picks app built around friendly Formula 1 and MotoGP weekend betting. It is designed to keep predictions, standings, and side wagers easy to track and fun to revisit.",
+      "The Podium is a premium iOS and iPadOS podium-picks app built around friendly Formula 1 and MotoGP weekend picks. It is designed to keep predictions, standings, and side games easy to track and fun to revisit.",
     whatIBuilt:
       "I built The Podium as a compact multi-tab experience around picks, results, scoreboards, player tracking, and a simple bet ledger. The focus was on making a sports prediction app feel clear, polished, and lightweight enough for repeated use during a season.",
     whatILearned:
@@ -265,6 +271,9 @@ export const apps: AppEntry[] = [
     roadmap: "Map and feed refinement",
     githubUrl: "https://github.com/donnoel/Pulseboard",
     githubPagesUrl: "https://donnoel.github.io/Pulseboard/",
+    heroImage: "/apps/pulseboard/hero.jpeg",
+    heroFit: "cover",
+    heroPosition: "center",
     summary:
       "Earth Pulse is a map-first iPhone and iPad app for exploring live natural events from direct public feeds. It is aimed at turning constantly moving event data into something clearer, more structured, and easier to scan.",
     whatIBuilt:
@@ -288,6 +297,9 @@ export const apps: AppEntry[] = [
     githubUrl: "https://github.com/donnoel/apps-showcase",
     githubPagesUrl: "https://donnoel.github.io/apps-showcase/",
     websiteUrl: "https://main.d3g59tagskgi8.amplifyapp.com/",
+    heroImage: "/apps/app-showcase/hero.jpeg",
+    heroFit: "cover",
+    heroPosition: "center",
     summary:
       "App Showcase is the web portfolio that ties the full project collection together. It gives each app a place to live with status, platform, links, roadmap notes, and a short story about what was built.",
     whatIBuilt:
