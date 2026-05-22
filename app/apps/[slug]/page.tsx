@@ -29,6 +29,7 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
     Boolean(app.appStoreUrl) ||
     Boolean(app.playStoreUrl) ||
     Boolean(app.githubUrl) ||
+    Boolean(app.githubPagesUrl) ||
     Boolean(app.websiteUrl)
 
   const hasStory =
@@ -41,6 +42,9 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
       <div className={styles.container}>
         <div className={styles.headerBlock}>
           <div className={styles.headerText}>
+            <p className={styles.projectLabel}>
+              Project {app.projectNumber} · {app.projectName}
+            </p>
             <h1 className={styles.title}>{app.name}</h1>
 
             <p className={styles.description}>{app.description}</p>
@@ -82,6 +86,11 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
             </div>
 
             <div>
+              <p className={styles.metaLabel}>Audience</p>
+              <p className={styles.metaValue}>{app.audience}</p>
+            </div>
+
+            <div>
               <p className={styles.metaLabel}>Location</p>
               <p className={styles.metaValue}>
                 {app.location || "Not listed"}
@@ -89,8 +98,8 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
             </div>
 
             <div>
-              <p className={styles.metaLabel}>Notes</p>
-              <p className={styles.metaValue}>{app.notes || "—"}</p>
+              <p className={styles.metaLabel}>Roadmap</p>
+              <p className={styles.metaValue}>{app.roadmap || "—"}</p>
             </div>
           </div>
         </section>
@@ -130,6 +139,17 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
                   className={styles.secondaryLink}
                 >
                   GitHub
+                </a>
+              )}
+
+              {app.githubPagesUrl && (
+                <a
+                  href={app.githubPagesUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.secondaryLink}
+                >
+                  GitHub Pages
                 </a>
               )}
 
