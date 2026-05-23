@@ -1,14 +1,8 @@
 import { apps } from "../../data/apps"
 import styles from "./page.module.css"
 
-function parseCreatedOn(value: string): number {
-  const [month, day, year] = value.split("/").map(Number)
-  const fullYear = year < 100 ? 2000 + year : year
-  return new Date(fullYear, month - 1, day).getTime()
-}
-
 const sortedApps = [...apps].sort(
-  (a, b) => parseCreatedOn(b.createdOn) - parseCreatedOn(a.createdOn)
+  (a, b) => b.projectNumber - a.projectNumber
 )
 
 export default function AppsPage() {
