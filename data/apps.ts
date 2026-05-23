@@ -377,7 +377,7 @@ export const apps: AppEntry[] = [
   {
     projectNumber: 15,
     projectName: "Ketch",
-    slug: "catch",
+    slug: "ketch",
     name: "Ketch",
     description: "A personal-use iPhone and iPad app for quickly catching ideas, tasks, and loose notes before they drift away.",
     platform: "iPhone / iPad",
@@ -389,7 +389,7 @@ export const apps: AppEntry[] = [
     roadmap: "",
     githubUrl: "https://github.com/donnoel/Ketch",
     githubPagesUrl: "https://donnoel.github.io/Ketch/",
-    heroImage: "/apps/catch/hero.jpeg",
+    heroImage: "/apps/ketch/hero.jpeg",
     heroFit: "contain",
     heroPosition: "center",
     summary:
