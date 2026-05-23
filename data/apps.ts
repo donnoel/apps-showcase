@@ -374,4 +374,29 @@ export const apps: AppEntry[] = [
     whatILearned:
       "Ticks is about building a tool that supports the way project work really happens: bursts, interruptions, forgotten starts, and the need for simple records without ceremony.",
   },
+  {
+    projectNumber: 15,
+    projectName: "Ketch",
+    slug: "catch",
+    name: "Ketch",
+    description: "A personal-use iPhone and iPad app for quickly catching ideas, tasks, and loose notes before they drift away.",
+    platform: "iPhone / iPad",
+    status: "In Development",
+    audience: "Personal Use",
+    version: "1.0",
+    location: "Personal Use",
+    createdOn: "5/23/26",
+    roadmap: "",
+    githubUrl: "https://github.com/donnoel/Ketch",
+    githubPagesUrl: "https://donnoel.github.io/Ketch/",
+    heroImage: "/apps/catch/hero.jpeg",
+    heroFit: "contain",
+    heroPosition: "center",
+    summary:
+      "Ketch is a personal-use capture app focused on getting thoughts, tasks, and small reminders out of your head quickly. The goal is to make capture feel immediate, calm, and low-friction.",
+    whatIBuilt:
+      "This project is being shaped around fast entry, lightweight organization, and a simple iPhone and iPad workflow for keeping small bits of information from getting lost.",
+    whatILearned:
+      "Ketch is another exercise in product restraint: building a small utility around speed, clarity, and habit rather than turning quick capture into a heavy system.",
+  },
 ]
