@@ -342,6 +342,9 @@ export const apps: AppEntry[] = [
     roadmap: "",
     githubUrl: "https://github.com/donnoel/PiSignage",
     githubPagesUrl: "https://donnoel.github.io/PiSignage/",
+    heroImage: "/apps/beam/hero.jpeg",
+    heroFit: "cover",
+    heroPosition: "center",
     summary:
       "Beam is the web-facing digital signage effort connected to the PiSignage system. It is focused on making screen content management more direct, understandable, and maintainable.",
     whatIBuilt:
