@@ -2,15 +2,9 @@ import Image from "next/image"
 import { apps } from "../data/apps"
 import styles from "./page.module.css"
 
-const featuredSlugs = [
-  "coloring-room",
-  "glow-daily-practice",
-  "easy-units",
-]
-
-const featuredApps = featuredSlugs
-  .map((slug) => apps.find((app) => app.slug === slug))
-  .filter((app): app is NonNullable<typeof app> => Boolean(app))
+const featuredApps = [...apps]
+  .sort((a, b) => b.projectNumber - a.projectNumber)
+  .slice(0, 3)
 
 const previewPanelTints: Record<string, string> = {
   "glow-daily-practice":
@@ -60,9 +54,9 @@ export default function Home() {
         <section className={styles.featuredSection}>
           <div className={styles.sectionHeader}>
             <div>
-              <p className={styles.eyebrow}>Featured Apps</p>
+              <p className={styles.eyebrow}>Latest Projects</p>
               <h2 className={styles.sectionTitle}>
-                A few projects from the collection
+                The newest work in the collection
               </h2>
             </div>
 
