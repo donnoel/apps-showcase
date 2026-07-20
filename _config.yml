@@ -1,0 +1,21 @@
+title: Don Builds
+description: A collection of apps and tools built across Apple platforms, Android, and the web.
+tagline: Thoughtful software, built in public and improved steadily.
+project_label: Don Noel / Projects
+status_label: 15 project stories
+github_url: https://github.com/donnoel/apps-showcase
+url: https://donnoel.github.io
+baseurl: /apps-showcase
+lang: en-US
+
+remote_theme: donnoel/projects-theme@v1.0.0
+plugins:
+  - jekyll-remote-theme
+
+exclude:
+  - AGENTS.md
+  - app
+  - data
+  - node_modules
+  - public
+
